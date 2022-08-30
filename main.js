@@ -15,3 +15,7 @@ const createWindow = () => {
 
     window.loadFile('index.html')
 }
+
+app.whenReady().then(() => {
+    createWindow();
+})
