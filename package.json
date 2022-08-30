@@ -9,6 +9,16 @@
   "scripts": {
     "start": "electron ."
   },
+  "build": {
+    "appId": "com.github.trollar.calculator",
+    "productName": "Calculator",
+    "appImage": {
+      "license": "LICENSE",
+      "synopsis": "Simple Calculator to test making apps with Electron.",
+      "category": "Educational",
+      "artifactName": "${productName}-${version}.${ext}"
+    }
+  },
   "private": true,
   "devDependencies": {
     "electron": "^20.1.0",
