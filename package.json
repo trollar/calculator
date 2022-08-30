@@ -1,0 +1,13 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Simple calculator created with Electron",
+  "main": "main.js",
+  "repository": "https://github.com/trollar/calculator",
+  "author": "trollar",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "electron": "^20.1.0"
+  }
+}
