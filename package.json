@@ -6,6 +6,9 @@
   "repository": "https://github.com/trollar/calculator",
   "author": "trollar",
   "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
   "private": true,
   "devDependencies": {
     "electron": "^20.1.0"
