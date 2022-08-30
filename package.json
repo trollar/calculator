@@ -12,11 +12,10 @@
   "build": {
     "appId": "com.github.trollar.calculator",
     "productName": "Calculator",
-    "appImage": {
-      "license": "LICENSE",
+    "artifactName": "${productName}-${version}.${ext}",
+    "linux": {
       "synopsis": "Simple Calculator to test making apps with Electron.",
-      "category": "Education",
-      "artifactName": "${productName}-${version}.${ext}"
+      "category": "Education"
     }
   },
   "private": true,
