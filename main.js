@@ -3,6 +3,7 @@
 */
 
 const { app, BrowserWindow } = require('electron')
+const path = require('path')
 
 const createWindow = () => {
     const window = new BrowserWindow(
@@ -10,24 +11,13 @@ const createWindow = () => {
             width: 400,
             height: 600,
             autoHideMenuBar: true,
+            webPreferences: {
+                preload: path.join(app.getAppPath(), 'preload.js')
+            }
         }
     )
 
     window.loadFile('index.html')
-
-
-  ipcMain.handle('dark-mode:toggle', () => {
-    if (nativeTheme.shouldUseDarkColors) {
-      nativeTheme.themeSource = 'light'
-    } else {
-      nativeTheme.themeSource = 'dark'
-    }
-    return nativeTheme.shouldUseDarkColors
-  })
-
-  ipcMain.handle('dark-mode:system', () => {
-    nativeTheme.themeSource = 'system'
-  })
 }
 
 app.whenReady().then(() => {
